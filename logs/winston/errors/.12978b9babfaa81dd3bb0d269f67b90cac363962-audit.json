@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\.12978b9babfaa81dd3bb0d269f67b90cac363962-audit.json",
+    "files": [
+        {
+            "date": 1693243802333,
+            "name": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\phu-2023-28-08-23-error.log",
+            "hash": "7aa594995969768b8c7c74f4c45b68c6f9659c9ae536c9f93440ed06313f5b41"
+        },
+        {
+            "date": 1693329529391,
+            "name": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\phu-2023-29-08-23-error.log",
+            "hash": "4bfaa5cbb6fca337f1ee15106e3a0ea5e986d2399a3146cdd4b247c106fb6835"
+        }
+    ],
+    "hashType": "sha256"
+}

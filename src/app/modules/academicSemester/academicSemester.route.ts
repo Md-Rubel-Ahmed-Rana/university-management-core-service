@@ -5,6 +5,8 @@ import { AcademicSemesterValidator } from "./academicSemester.validator";
 
 const router = Router();
 
+router.get("/", AcademicSemesterController.getAllFromDB);
+
 router.post("/", validateRequest(AcademicSemesterValidator.createZod) , AcademicSemesterController.insertIntoDB);
 
 

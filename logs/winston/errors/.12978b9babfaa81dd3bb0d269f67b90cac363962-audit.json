@@ -6,19 +6,24 @@
     "auditLog": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\.12978b9babfaa81dd3bb0d269f67b90cac363962-audit.json",
     "files": [
         {
-            "date": 1693243802333,
-            "name": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\phu-2023-28-08-23-error.log",
-            "hash": "7aa594995969768b8c7c74f4c45b68c6f9659c9ae536c9f93440ed06313f5b41"
+            "date": 1694278477818,
+            "name": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\phu-2023-09-09-22-error.log",
+            "hash": "88724fb97962f664ed7ca9e9df608779296ee9818ef2df77659af70bbf0e7cc0"
         },
         {
-            "date": 1693329529391,
-            "name": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\phu-2023-29-08-23-error.log",
-            "hash": "4bfaa5cbb6fca337f1ee15106e3a0ea5e986d2399a3146cdd4b247c106fb6835"
+            "date": 1694535889145,
+            "name": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\phu-2023-12-09-22-error.log",
+            "hash": "fafb761564a1bdf76cf8dcf39c1005cb200f5ec613e7f78def38bc30eb856dcf"
         },
         {
-            "date": 1693332125339,
-            "name": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\phu-2023-30-08-00-error.log",
-            "hash": "82c145612e3662926dd88a0b862ceacf4145a06b86e86dacefb9341f79095ad1"
+            "date": 1694539550673,
+            "name": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\phu-2023-12-09-23-error.log",
+            "hash": "7311d982093d9a45533cdc941b0920bf2c207736e7bacacdcc797674d597dd68"
+        },
+        {
+            "date": 1694541775497,
+            "name": "I:\\Mission-6 (SQL)\\UM-App-Core-Service\\logs\\winston\\errors\\phu-2023-13-09-00-error.log",
+            "hash": "54c92c824be3486167f018073ddc386fb7531048ccdb4fa9317b2c5e123242ab"
         }
     ],
     "hashType": "sha256"

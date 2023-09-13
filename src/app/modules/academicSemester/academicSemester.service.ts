@@ -1,10 +1,9 @@
-import { AcademicSemester, Prisma, PrismaClient } from '@prisma/client';
+import { AcademicSemester, Prisma } from '@prisma/client';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
+import { prisma } from '../../../shared/prismaInstance';
 import { IAcademicSemesterFilter } from './academicSemester.interface';
-
-const prisma = new PrismaClient();
 
 const insertIntoDB = async (
   data: AcademicSemester
@@ -40,7 +39,8 @@ const getAllFromDB = async (
     andCondition.push({
       AND: Object.keys(filterData).map(key => ({
         [key]: {
-          equals: filterData[key] as string,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          equals: (filterData as any)[key],
         },
       })),
     });

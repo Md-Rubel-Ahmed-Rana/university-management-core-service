@@ -10,6 +10,8 @@
     "lint:fix": "eslint . --fix",
     "migrate": "npx prisma migrate dev",
     "studio": "npx prisma studio",
+    "format": "npx prisma format",
+    "generate": "npx prisma generate",
     "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
     "prettier:fix": "prettier --write .",
     "lint-prettier": "yarn lint:check && yarn prettier:check",

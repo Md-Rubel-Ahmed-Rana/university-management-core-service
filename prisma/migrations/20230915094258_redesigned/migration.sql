@@ -1,16 +1,8 @@
-/*
-  Warnings:
-
-  - You are about to drop the `User` table. If the table is not empty, all the data it contains will be lost.
-
-*/
--- DropTable
-DROP TABLE "User";
-
 -- CreateTable
 CREATE TABLE "acamedic_semesters" (
     "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
+    "year" INTEGER NOT NULL,
     "code" TEXT NOT NULL,
     "startMonth" TEXT NOT NULL,
     "endMonth" TEXT NOT NULL,
@@ -50,7 +42,7 @@ CREATE TABLE "students" (
     "middleName" TEXT NOT NULL,
     "profileImage" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "contactNo" INTEGER NOT NULL,
+    "contactNo" TEXT NOT NULL,
     "gender" TEXT NOT NULL,
     "bloodGroup" TEXT NOT NULL,
     "academicSemesterId" TEXT NOT NULL,
@@ -71,7 +63,7 @@ CREATE TABLE "faculties" (
     "middleName" TEXT NOT NULL,
     "profileImage" TEXT NOT NULL,
     "email" TEXT NOT NULL,
-    "contactNo" INTEGER NOT NULL,
+    "contactNo" TEXT NOT NULL,
     "gender" TEXT NOT NULL,
     "bloodGroup" TEXT NOT NULL,
     "designation" TEXT NOT NULL,
@@ -81,6 +73,28 @@ CREATE TABLE "faculties" (
     "academicFacultyId" TEXT NOT NULL,
 
     CONSTRAINT "faculties_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "buildings" (
+    "id" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "buildings_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "rooms" (
+    "id" TEXT NOT NULL,
+    "roomNumber" TEXT NOT NULL,
+    "floor" TEXT NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+    "buildinId" TEXT NOT NULL,
+
+    CONSTRAINT "rooms_pkey" PRIMARY KEY ("id")
 );
 
 -- AddForeignKey
@@ -100,3 +114,6 @@ ALTER TABLE "faculties" ADD CONSTRAINT "faculties_academicDepartmentId_fkey" FOR
 
 -- AddForeignKey
 ALTER TABLE "faculties" ADD CONSTRAINT "faculties_academicFacultyId_fkey" FOREIGN KEY ("academicFacultyId") REFERENCES "acamedic_faculties"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "rooms" ADD CONSTRAINT "rooms_buildinId_fkey" FOREIGN KEY ("buildinId") REFERENCES "buildings"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
